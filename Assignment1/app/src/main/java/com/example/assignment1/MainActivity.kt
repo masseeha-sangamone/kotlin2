@@ -11,6 +11,7 @@ import androidx.compose.material3.MaterialTheme
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import androidx.core.net.toUri
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -22,13 +23,20 @@ class MainActivity : ComponentActivity() {
                     color = MaterialTheme.colorScheme.background
                 )
                 {
+
+                    val videoUri =
+                        "android.resource://com.example.assignment1/raw/catanddogvideo".toUri()
                     val navController= rememberNavController()
+
                     NavHost(navController=navController, startDestination = "Cat_Image",builder={
-                        composable("Cat_Image",){
+                        composable("Cat_Image"){
                             CatImage(navController)
                         }
-                        composable("Dog_Image",){
+                        composable("Dog_Image"){
                             CatAndDogImage(navController)
+                        }
+                        composable("CatAndDog_Video"){
+                            CatAndDogVideo(videoUri,navController)
                         }
                     })
                 }

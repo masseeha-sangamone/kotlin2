@@ -25,9 +25,7 @@ fun CatAndDogImage(navController: NavController) {
     val sound1 = MediaPlayer.create(context, R.raw.meow)
     val sound2 = MediaPlayer.create(context, R.raw.bowbow)
 
-
-        Row(
-        ) {
+        Row {
             Image(
                 painter = painterResource(id = R.drawable.cat),
                 contentDescription = "Cat",
@@ -61,6 +59,20 @@ fun CatAndDogImage(navController: NavController) {
         Button(onClick = {navController.navigate("Cat_Image")
         }){
             Text(text= "Back")
+        }
+
+    }
+
+    Column(
+        Modifier.fillMaxSize(),
+        horizontalAlignment = AbsoluteAlignment.Right,
+        verticalArrangement = Arrangement.Bottom
+    )
+    {
+        Button(onClick = {
+            navController.navigate("CatAndDog_Video")
+        }) {
+            Text(text = "Next")
         }
 
     }
