@@ -17,9 +17,10 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
+import androidx.navigation.NavController
 
 @Composable
-fun CatAndDogImage() {
+fun CatAndDogImage(navController: NavController) {
     val context = LocalContext.current
     val sound1 = MediaPlayer.create(context, R.raw.meow)
     val sound2 = MediaPlayer.create(context, R.raw.bowbow)
@@ -57,7 +58,8 @@ fun CatAndDogImage() {
         verticalArrangement = Arrangement.Bottom
     )
     {
-        Button(onClick = {}){
+        Button(onClick = {navController.navigate("Cat_Image")
+        }){
             Text(text= "Back")
         }
 

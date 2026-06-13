@@ -28,7 +28,7 @@ class MainActivity : ComponentActivity() {
                             CatImage(navController)
                         }
                         composable("Dog_Image",){
-                            CatAndDogImage()
+                            CatAndDogImage(navController)
                         }
                     })
                 }
