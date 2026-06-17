@@ -12,6 +12,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.core.net.toUri
+import com.example.assignment1.ui.theme.Animal
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -37,6 +38,12 @@ class MainActivity : ComponentActivity() {
                         }
                         composable("CatAndDog_Video"){
                             CatAndDogVideo(videoUri,navController)
+                        }
+                        composable("Animal_Images"){
+                            Animals(navController, modifier = Modifier )
+                        }
+                        composable("Search_Animals"){
+                            Animal(navController)
                         }
                     })
                 }

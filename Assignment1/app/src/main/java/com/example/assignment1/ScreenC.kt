@@ -46,6 +46,19 @@ fun CatAndDogVideo(
         }) {
             Text(text = "Back")
         }
+        Column(
+            Modifier.fillMaxSize(),
+            horizontalAlignment = AbsoluteAlignment.Right,
+            verticalArrangement = Arrangement.Bottom
+        )
+        {
+            Button(onClick = {
+                navController.navigate("Animal_Images")
+            }) {
+                Text(text = "Next")
+            }
+
+        }
 
     }
 
