@@ -109,7 +109,7 @@ fun ArithmeticApp(navController: NavController) {
     )
     {
         Button(onClick = {
-            navController.navigate("")
+            navController.navigate("HGestures")
         }) {
             Text(text = "Next")
         }

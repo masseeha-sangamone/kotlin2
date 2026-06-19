@@ -8,7 +8,9 @@ import com.example.assignment2b.NumberApp
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.compose.composable
+import com.example.assignment.HorizontalGestures
 import com.example.assignment2b.ArithmeticApp
+import com.example.assignment.VerticalGestures
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -27,6 +29,12 @@ class MainActivity : ComponentActivity() {
                     }
                     composable("Arithmetic") {
                         ArithmeticApp(navController)
+                    }
+                    composable("HGestures") {
+                        HorizontalGestures(navController)
+                    }
+                    composable("VGestures") {
+                        VerticalGestures(navController)
                     }
                 })
         }
